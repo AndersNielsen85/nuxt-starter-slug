@@ -5,3 +5,9 @@
   </ul>
   <div>Error page</div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps({
+  error: Object,
+});
+</script>

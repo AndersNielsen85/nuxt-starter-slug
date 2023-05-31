@@ -13,6 +13,7 @@ const { data } = await useFetch(() => `/api${path}`, {
 });
 
 if (!data.value) {
+  showError('No data');
   throw createError('No data');
 }
 </script>
