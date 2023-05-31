@@ -10,8 +10,8 @@ const route = useRoute();
 const path = route.fullPath;
 const { data } = await useFetch(() => `/api${path}`);
 
-//if (!data.value) {
+if (!data.value) {
   //showError('No data');
-  //throw createError('No data');
-//}
+  throw createError('No data');
+}
 </script>
