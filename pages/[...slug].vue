@@ -8,15 +8,10 @@
 const route = useRoute();
 
 const path = route.fullPath;
-const { data } = await useFetch(() => `/api${path}`, {
-  onResponseError({ response }) {
-    console.log('error in request');
-  },
-});
+const { data } = await useFetch(() => `/api${path}`);
 
-if (!data.value) {
-  // Show error to give a visual error client-side.
-  showError('No data');
-  throw createError('No data');
-}
+//if (!data.value) {
+  //showError('No data');
+  //throw createError('No data');
+//}
 </script>
